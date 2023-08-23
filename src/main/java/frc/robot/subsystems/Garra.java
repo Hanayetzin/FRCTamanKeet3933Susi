@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
-
+/* 
 public class Garra {
     DoubleSolenoid SCono= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
     DoubleSolenoid SCubo= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 2, 3);
@@ -77,5 +77,6 @@ public class Garra {
 
     
                 }
+                
 
-
+*/
