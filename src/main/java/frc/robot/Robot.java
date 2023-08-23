@@ -5,16 +5,17 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import frc.robot.hardware.Constantes;
+//import frc.robot.hardware.Constantes;
 import frc.robot.hardware.Controles;
 import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.cameraserver.CameraServer;
+//import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 
 
-
+// un motor más 
    
+
 
 public class Robot extends TimedRobot {
 
@@ -85,7 +86,7 @@ public class Robot extends TimedRobot {
     Timer.delay(0.3);
     SparkDT.Mover(0.2, 0.1);
     Timer.delay(0.3);
-   // GarraS.Abrir();
+    //arraS.Abrir();
     Timer.delay(0.3);
     SparkDT.Mover(1.9, -0.1);
   }
@@ -95,7 +96,7 @@ public class Robot extends TimedRobot {
     Timer.delay(0.1);
     SparkDT.Mover(0.5, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-   // GarraS.Abrir();
+    //GarraS.Abrir();
     Timer.delay(0.1);
     SparkDT.Mover(0.6, -0.25); //bajar rampa
     Timer.delay(1);
@@ -106,13 +107,13 @@ public class Robot extends TimedRobot {
     SparkDT.LimpiarEncoder();
     MarcoS.BrazoAutonomo(30, 0.4); //subir poquito por cubo
     Timer.delay(0.2);
-   // GarraS.PistonMarcoAbrir();
+    //GarraS.PistonMarcoAbrir();
     Timer.delay(0.2);
     MarcoS.BrazoAutonomo(125, 0.4); //termina de subir
     Timer.delay(0.1);
     SparkDT.Mover(0.9, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-   // GarraS.Abrir();
+    //GarraS.Abrir();
     Timer.delay(0.1);
     SparkDT.Mover(3.5, -0.3);
   }
@@ -120,20 +121,20 @@ public class Robot extends TimedRobot {
     SparkDT.LimpiarEncoder();
     MarcoS.BrazoAutonomo(30, 0.4);
     Timer.delay(0.2);
-   // GarraS.PistonMarcoAbrir();
+    //GarraS.PistonMarcoAbrir();
     Timer.delay(0.2);
     MarcoS.BrazoAutonomo(125, 0.4);
     Timer.delay(0.1);
     SparkDT.Mover(0.9, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-   // GarraS.Abrir();
+    //GarraS.Abrir();
     Timer.delay(0.1);
     SparkDT.Mover(2, -0.3);
   }
 
   @Override
   public void autonomousInit() {
-   double gradosAlto = 150;
+   //double gradosAlto = 150;
     //cubo mayor lejos (hasta la derecha de la cancha)
 
     /* 
