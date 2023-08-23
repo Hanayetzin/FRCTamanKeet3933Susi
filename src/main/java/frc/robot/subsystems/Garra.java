@@ -10,6 +10,7 @@ import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import frc.robot.hardware.Constantes;
 
+
 public class Garra {
     DoubleSolenoid SCono= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
     DoubleSolenoid SCubo= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 2, 3);
