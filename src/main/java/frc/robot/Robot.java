@@ -21,7 +21,7 @@ public class Robot extends TimedRobot {
   public static Controles control;
  
  // public static PnuematicArm Pne;
-  public static Garra GarraS;
+ // public static Garra GarraS;
   public static SparkDrive SparkDT;
   public static Marco MarcoS;
   //public static GiroscopioRobot GirosRo;
@@ -36,7 +36,7 @@ public class Robot extends TimedRobot {
    
   //Pne = new PnuematicArm();
     control = new Controles();
-   GarraS = new Garra();
+   //GarraS = new Garra();
    SparkDT = new SparkDrive();
    MarcoS = new Marco();
   // BrazoS = new Brazo();
@@ -85,7 +85,7 @@ public class Robot extends TimedRobot {
     Timer.delay(0.3);
     SparkDT.Mover(0.2, 0.1);
     Timer.delay(0.3);
-    GarraS.Abrir();
+   // GarraS.Abrir();
     Timer.delay(0.3);
     SparkDT.Mover(1.9, -0.1);
   }
@@ -95,7 +95,7 @@ public class Robot extends TimedRobot {
     Timer.delay(0.1);
     SparkDT.Mover(0.5, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-    GarraS.Abrir();
+   // GarraS.Abrir();
     Timer.delay(0.1);
     SparkDT.Mover(0.6, -0.25); //bajar rampa
     Timer.delay(1);
@@ -106,13 +106,13 @@ public class Robot extends TimedRobot {
     SparkDT.LimpiarEncoder();
     MarcoS.BrazoAutonomo(30, 0.4); //subir poquito por cubo
     Timer.delay(0.2);
-    GarraS.PistonMarcoAbrir();
+   // GarraS.PistonMarcoAbrir();
     Timer.delay(0.2);
     MarcoS.BrazoAutonomo(125, 0.4); //termina de subir
     Timer.delay(0.1);
     SparkDT.Mover(0.9, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-    GarraS.Abrir();
+   // GarraS.Abrir();
     Timer.delay(0.1);
     SparkDT.Mover(3.5, -0.3);
   }
@@ -120,13 +120,13 @@ public class Robot extends TimedRobot {
     SparkDT.LimpiarEncoder();
     MarcoS.BrazoAutonomo(30, 0.4);
     Timer.delay(0.2);
-    GarraS.PistonMarcoAbrir();
+   // GarraS.PistonMarcoAbrir();
     Timer.delay(0.2);
     MarcoS.BrazoAutonomo(125, 0.4);
     Timer.delay(0.1);
     SparkDT.Mover(0.9, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-    GarraS.Abrir();
+   // GarraS.Abrir();
     Timer.delay(0.1);
     SparkDT.Mover(2, -0.3);
   }
@@ -193,9 +193,9 @@ public class Robot extends TimedRobot {
     //MarcoS.Marcomover();
     MarcoS.BrazoMover();
     //Pne.Control();
-    GarraS.Cono();
-    GarraS.Cubo();
-    GarraS.PistonMarco();
+   // GarraS.Cono();
+  //GarraS.Cubo();
+  //GarraS.PistonMarco();
     double angulo = gyro.getAngle();
     System.out.println("angulo " + angulo);
   
