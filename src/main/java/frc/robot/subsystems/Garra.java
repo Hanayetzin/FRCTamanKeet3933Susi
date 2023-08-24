@@ -11,10 +11,38 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import frc.robot.hardware.Constantes;
 
 public class Garra {
-    DoubleSolenoid SCono= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 0, 1);
-    DoubleSolenoid SCubo= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 2, 3);
     DoubleSolenoid SMarco= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 4, 5);
-    
+    public CANSparkMax DriveUp = new CANSparkMax(6, MotorType.kBrushless);// esto no es vdd
+    public CANSparkMax DriveDown = new CANSparkMax(7, MotorType.kBrushless);
+
+    RelativeEncoder EncoderUp = DriveUp.getEncoder();
+    RelativeEncoder EncoderDown = DriveDown.getEncoder();
+
+    public void Cadena(){
+        if(Robot.control.readJoystickButtons(4)){
+            DriveDown.set(0.5);
+            // cuando presionas Y la cadena sube
+
+        }
+        else if(Robot.control.readJoystickButtons(1)){
+            DriveDown.set(-0.5)
+            // cuando presionas A la cadena baja
+
+        }
+    }
+    public void Intake(){
+        if(Robot.control.readJoystickButtons(3)){
+            DriveUp.set(0.5);
+            // cuando presionas X la garra absorbe
+
+        }
+        else if(Robot.control.readJoystickButtons(2)){
+            DriveUp.set(-0.5);
+            // Cuando presionas B la garra lanza
+
+        }
+
+    }
 
     public void PistonMarco(){
                     if( Robot.control.readJoystickButtons(7)){
