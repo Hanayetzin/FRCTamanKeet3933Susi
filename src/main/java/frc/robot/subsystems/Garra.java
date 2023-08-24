@@ -26,7 +26,7 @@ public class Garra {
 
         }
         else if(Robot.control.readJoystickButtons(1)){
-            DriveDown.set(-0.5)
+            DriveDown.set(-0.5);
             // cuando presionas A la cadena baja
 
         }
