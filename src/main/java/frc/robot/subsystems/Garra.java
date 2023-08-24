@@ -10,6 +10,7 @@ import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import frc.robot.hardware.Constantes;
 
+
 public class Garra {
     DoubleSolenoid SMarco= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 4, 5);
     public CANSparkMax DriveUp = new CANSparkMax(6, MotorType.kBrushless);// esto no es vdd
