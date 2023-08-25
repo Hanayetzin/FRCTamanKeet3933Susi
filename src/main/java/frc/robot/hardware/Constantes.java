@@ -16,6 +16,7 @@ public static final double nerfGiro = 0.75; // Un nerf especifico para que el gi
 public static final double modoDos = 0.3; //Un nerf a la velocidad cuando se entra al modo 2 de conducción lenta, 1 es muy rapido y 0 es stop
 //MOVIMIENTO DEL BRAZO
 public static final double potenciaBrazo = 0.5;
+public static final double potenciaCadena = 0.5;
    /*
     //  ______           __                                                                 
     // /\  _  \         /\ \__                                                              
