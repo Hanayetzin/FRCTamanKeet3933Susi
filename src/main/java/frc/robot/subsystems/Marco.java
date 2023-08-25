@@ -20,11 +20,11 @@ public class Marco {
     public Timer timer;
     public double encoderConversionBrazo = Constantes.encoderBrazoGrados; 
   
-    public CANSparkMax motorBrazo = new CANSparkMax(5, MotorType.kBrushless);
+    //public CANSparkMax motorBrazo = new CANSparkMax(5, MotorType.kBrushless);
     
-    RelativeEncoder EncoderBrazo = motorBrazo.getEncoder();
+    //RelativeEncoder EncoderBrazo = motorBrazo.getEncoder();
     
-    
+    /* 
     public void BrazoMover(){
         double potencia = Constantes.potenciaBrazo;
 
@@ -40,7 +40,7 @@ public class Marco {
         }
 
     }
-
+*/
     public double Sensitivity(double X, double a){
         double Power = a*(X*X*X)+(1-a)*X;
  
@@ -52,12 +52,12 @@ public void BrazoAutonomo(double Angulo,double velocidad){
         System.out.println("Comienza Mover Brazo");
           int i=24000;
           
-          double pBrazo = EncoderBrazo.getPosition() * encoderConversionBrazo; 
+          //double pBrazo = EncoderBrazo.getPosition() * encoderConversionBrazo; 
           
-          double pBrazo0 = EncoderBrazo.getPosition() * encoderConversionBrazo;
-          System.out.println("  right "+ pBrazo);
-          System.out.println("  EncoderR "+ EncoderBrazo.getPosition());
-     
+         // double pBrazo0 = EncoderBrazo.getPosition() * encoderConversionBrazo;
+          //System.out.println("  right "+ pBrazo);
+         // System.out.println("  EncoderR "+ EncoderBrazo.getPosition());
+     /* 
           while( (pBrazo0 - Angulo) < pBrazo && 0 < velocidad ){
             if(i==24000){
               System.out.println("  pBrazo "+ pBrazo);
@@ -90,8 +90,8 @@ public void BrazoAutonomo(double Angulo,double velocidad){
           // System.out.println("X: " + positionX + " - Y: " + positionY + " - A: " + angle);
         //  System.out.println("leftL: " + left + "  rightR: " + right + "  angle: " + angle);
       }
-   
+   */
 }
-
+}
 
 

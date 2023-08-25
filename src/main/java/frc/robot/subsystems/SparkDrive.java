@@ -12,7 +12,6 @@ import frc.robot.hardware.Constantes;
 
 
 public class SparkDrive {
-    public CANSparkMax DriveR3 = new CANSparkMax(6, MotorType.kBrushless);// esto no es vdd
     public CANSparkMax DriveR1 = new CANSparkMax(3, MotorType.kBrushless);
     public CANSparkMax DriveR2 = new CANSparkMax(4, MotorType.kBrushless);
     public CANSparkMax DriveL1 = new CANSparkMax(1, MotorType.kBrushless);

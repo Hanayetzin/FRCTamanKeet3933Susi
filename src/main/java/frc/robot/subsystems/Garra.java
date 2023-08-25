@@ -11,40 +11,62 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import frc.robot.hardware.Constantes;
 
 
+
 public class Garra {
     DoubleSolenoid SMarco= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 4, 5);
-    public CANSparkMax DriveUp = new CANSparkMax(6, MotorType.kBrushless);// esto no es vdd
-    public CANSparkMax DriveDown = new CANSparkMax(7, MotorType.kBrushless);
+    public CANSparkMax DriveUp = new CANSparkMax(5, MotorType.kBrushless);// esto no es vdd
+    public CANSparkMax DriveDown = new CANSparkMax(14, MotorType.kBrushless);
 
     RelativeEncoder EncoderUp = DriveUp.getEncoder();
     RelativeEncoder EncoderDown = DriveDown.getEncoder();
 
     public void Cadena(){
+        double potencia = Constantes.potenciaCadena;
+
+      double sensivilidad = 1; 
+      DriveDown.setSmartCurrentLimit(150);
+      DriveDown.setClosedLoopRampRate(0.5);
+
+      DriveDown.set(-Sensitivity(Robot.control.readJoystickAxis(Constantes.XB_RJ_X), sensivilidad)* potencia);
+     
         if(Robot.control.readJoystickButtons(4)){
-            DriveDown.set(0.5);
+            DriveDown.set(-0.2);
             // cuando presionas Y la cadena sube
 
         }
-        else if(Robot.control.readJoystickButtons(1)){
-            DriveDown.set(-0.5);
+        if(Robot.control.readJoystickButtons(1)){
+            DriveDown.set(0.2);
             // cuando presionas A la cadena baja
 
         }
+        
+
     }
+    public double Sensitivity(double X, double a){
+        double Power = a*(X*X*X)+(1-a)*X;
+ 
+        return Power;
+     }
     public void Intake(){
+        double potencia = Constantes.potenciaBrazo;
+
+        double sensivilidad = 1; 
+        DriveUp.setSmartCurrentLimit(150);
+        DriveUp.setClosedLoopRampRate(0.3);
+
+        DriveUp.set(-Sensitivity(Robot.control.readJoystickAxis(1), sensivilidad)* potencia);
+       
         if(Robot.control.readJoystickButtons(3)){
-            DriveUp.set(0.5);
-            // cuando presionas X la garra absorbe
+            DriveUp.set(0.2);
+            // cuando presionas X la garra
 
         }
-        else if(Robot.control.readJoystickButtons(2)){
-            DriveUp.set(-0.5);
-            // Cuando presionas B la garra lanza
+        if(Robot.control.readJoystickButtons(2)){
+            DriveUp.set(-0.2);
 
         }
-
     }
-
+    
     public void PistonMarco(){
                     if( Robot.control.readJoystickButtons(7)){
                         SMarco.set(Value.kReverse);         

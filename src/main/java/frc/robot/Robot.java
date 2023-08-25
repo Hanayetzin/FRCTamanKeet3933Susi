@@ -20,9 +20,8 @@ import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 public class Robot extends TimedRobot {
 
   public static Controles control;
- 
  // public static PnuematicArm Pne;
- // public static Garra GarraS;
+  public static Garra GarraS;
   public static SparkDrive SparkDT;
   public static Marco MarcoS;
   //public static GiroscopioRobot GirosRo;
@@ -37,7 +36,7 @@ public class Robot extends TimedRobot {
    
   //Pne = new PnuematicArm();
     control = new Controles();
-   //GarraS = new Garra();
+   GarraS = new Garra();
    SparkDT = new SparkDrive();
    MarcoS = new Marco();
   // BrazoS = new Brazo();
@@ -189,14 +188,16 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     //Aqui el codigo donde vamos a poner toda la estructura del robot
-
+    //GarraS.Cadena();
+    GarraS.Intake();
+    GarraS.PistonMarco();
+    GarraS.Cadena();
     SparkDT.drive();
     //MarcoS.Marcomover();
-    MarcoS.BrazoMover();
+   // MarcoS.BrazoMover();
     //Pne.Control();
    // GarraS.Cono();
   //GarraS.Cubo();
-  //GarraS.PistonMarco();
     double angulo = gyro.getAngle();
     System.out.println("angulo " + angulo);
   
