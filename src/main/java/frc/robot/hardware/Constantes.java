@@ -53,8 +53,8 @@ public static final double encoderBrazoGrados = 1.5;
 //    | |___| (_) | | | | |_| | | (_) | |  __/\__ \ 
 //     \_____\___/|_| |_|\__|_|  \___/|_|\___||___/ 
 
-public static final int puertoXbox = 0;
-public static final int puertoJoystick = 1;
+public static final int puertoXbox = 0; //no tiene marca roja de TK, controla el chasis
+public static final int puertoJoystick = 1; //controla la garra
 
 //-----------------------------------------------------
 //    __   __           ____            
