@@ -30,12 +30,12 @@ public class Garra {
       DriveDown.set(-Sensitivity(Robot.control.readJoystickAxis(Constantes.XB_RJ_X), sensivilidad)* potencia);
      
         if(Robot.control.readJoystickButtons(4)){
-            DriveDown.set(-0.2);
+            DriveDown.set(-0.8);
             // cuando presionas Y la cadena sube
 
         }
         if(Robot.control.readJoystickButtons(1)){
-            DriveDown.set(0.2);
+            DriveDown.set(0.8);
             // cuando presionas A la cadena baja
 
         }
@@ -57,12 +57,12 @@ public class Garra {
         DriveUp.set(-Sensitivity(Robot.control.readJoystickAxis(1), sensivilidad)* potencia);
        
         if(Robot.control.readJoystickButtons(3)){
-            DriveUp.set(0.2);
+            DriveUp.set(0.5);
             // cuando presionas X la garra
 
         }
         if(Robot.control.readJoystickButtons(2)){
-            DriveUp.set(-0.2);
+            DriveUp.set(-0.5);
 
         }
     }

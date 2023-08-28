@@ -115,7 +115,7 @@ public class SparkDrive {
      EncoderR2.setPosition(0);
    }
 
-    public void Mover(double distancia,double velocidad){
+    public void Mover(double distancia,double velocidad){ //es para el autonomo
       System.out.println("Comienza Mover");
         int i=2400;
         
