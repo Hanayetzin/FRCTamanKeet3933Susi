@@ -47,22 +47,25 @@ public class SparkDrive {
             switcher = true;
             System.out.print("cambio de modo de conducción a ràpido :)");
         }
+       
       
 
 
         if (switcher){
             test();
+            ButtonDrive();
         }
         else {
             UlisesDrive();
+            ButtonDrive();
         }
-
+/* 
         if(Robot.control.readPS4Buttons(Constantes.XB_B_A)){
             DriveL1.set(0);
             DriveL2.set(0);
             DriveR1.set(0);
             DriveR2.set(0);
-        }
+        }*/
     }
 
     public void test(){
@@ -113,6 +116,46 @@ public class SparkDrive {
      EncoderR.setPosition(0);
      EncoderL2.setPosition(0);
      EncoderR2.setPosition(0);
+   }
+   public void ButtonDrive(){
+     
+    if(Robot.control.readPS4Buttons(4)){
+      DriveL1.set(0.1);
+      DriveL2.set(0.1);
+      DriveR1.set(-0.1);
+      DriveR2.set(0.1);   
+
+      // cuando presionas Y va hacia delante
+
+    }
+    if(Robot.control.readPS4Buttons(1)){
+      DriveL1.set(-0.1);
+      DriveL2.set(-0.1);
+      DriveR1.set(0.1);
+      DriveR2.set(-0.1);   
+
+      // cuando presionas A va hacia atras
+
+    }
+    if(Robot.control.readPS4Buttons(3)){
+      DriveL1.set(-0.1);
+      DriveL2.set(-0.1);
+      DriveR1.set(-0.1);
+      DriveR2.set(0.1);   
+
+      // cuando presionas X va hacia la derecha
+
+    }
+    if(Robot.control.readPS4Buttons(2)){
+      DriveL1.set(0.1);
+      DriveL2.set(0.1);
+      DriveR1.set(0.1);
+      DriveR2.set(-0.1);   
+
+      // cuando presionas B va hacia la izquierda
+
+    }
+
    }
 
     public void Mover(double distancia,double velocidad){ //es para el autonomo

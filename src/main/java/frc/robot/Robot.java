@@ -91,43 +91,47 @@ public class Robot extends TimedRobot {
   }
   public void centro (){
     SparkDT.LimpiarEncoder();
-    MarcoS.BrazoAutonomo(90, 0.35);
-    Timer.delay(0.1);
+    GarraS.PistonMarcoAbrir();
+    Timer.delay(0.2);
     SparkDT.Mover(0.5, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-    //GarraS.Abrir();
+    GarraS.LiftAutonomo(-0.8);            //subir elevador
+    Timer.delay(1);
+    GarraS.GarraAutonomo(-0.5);           //soltar cubo
     Timer.delay(0.1);
-    SparkDT.Mover(0.6, -0.25); //bajar rampa
+    GarraS.LiftAutonomo(0.8);      //bajar elevador
+    Timer.delay(1);
+    SparkDT.Mover(0.6, -0.25); //chocar rampa
     Timer.delay(1);
     SparkDT.Mover(1.4, -0.1); //subir rampa 
   }
 
   public void lejos (){
     SparkDT.LimpiarEncoder();
-    MarcoS.BrazoAutonomo(30, 0.4); //subir poquito por cubo
+    GarraS.PistonMarcoAbrir();
     Timer.delay(0.2);
-    //GarraS.PistonMarcoAbrir();
-    Timer.delay(0.2);
-    MarcoS.BrazoAutonomo(125, 0.4); //termina de subir
-    Timer.delay(0.1);
     SparkDT.Mover(0.9, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-    //GarraS.Abrir();
+    GarraS.LiftAutonomo(-0.8);
+    Timer.delay(1);
+    GarraS.GarraAutonomo(-0.5);
     Timer.delay(0.1);
+    GarraS.LiftAutonomo(0.8);
+    Timer.delay(1);
     SparkDT.Mover(3.5, -0.3);
   }
   public void cerca (){
     SparkDT.LimpiarEncoder();
-    MarcoS.BrazoAutonomo(30, 0.4);
+    GarraS.PistonMarcoAbrir();
     Timer.delay(0.2);
-    //GarraS.PistonMarcoAbrir();
-    Timer.delay(0.2);
-    MarcoS.BrazoAutonomo(125, 0.4);
-    Timer.delay(0.1);
     SparkDT.Mover(0.9, 0.2);   //acerarce para cubo
     Timer.delay(0.1);
-    //GarraS.Abrir();
-    Timer.delay(0.1);
+    GarraS.LiftAutonomo(-0.8);
+    Timer.delay(1);
+    GarraS.GarraAutonomo(-0.5);
+    Timer.delay(1);
+    GarraS.LiftAutonomo(0.8);
+    Timer.delay(1);
     SparkDT.Mover(2, -0.3);
   }
 

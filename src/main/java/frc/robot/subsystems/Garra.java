@@ -58,15 +58,21 @@ public class Garra {
        
         if(Robot.control.readJoystickButtons(3)){
             DriveUp.set(0.5);
-            // cuando presionas X la garra
+            // cuando presionas X la garra absorbe
 
         }
         if(Robot.control.readJoystickButtons(2)){
             DriveUp.set(-0.5);
+            // cuando presionas B la garra lanza
 
         }
     }
-    
+    public void GarraAutonomo(double speed){
+        DriveUp.set(speed);
+    }
+    public void LiftAutonomo(double speed){
+        DriveDown.set(speed);
+    }
     public void PistonMarco(){
                     if( Robot.control.readJoystickButtons(7)){
                         SMarco.set(Value.kReverse);         

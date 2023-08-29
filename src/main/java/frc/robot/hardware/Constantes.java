@@ -10,7 +10,7 @@ public class Constantes {
   //    \ \_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\  \ \_\   
   //     \/_/   \/_____/   \/_____/   \/_____/   \/_____/   \/_/   
 //MOVIMIETO DEL CHASIS
-public static final double nerfVelocidad = 0.5; //Un nerf para la velocidad del chasis, puede ir de 0 a 1. 1 es lo más rapido y 0 lo para por completo. 
+public static final double nerfVelocidad = 0.6; //Un nerf para la velocidad del chasis, puede ir de 0 a 1. 1 es lo más rapido y 0 lo para por completo. 
 public static final double correcionDireccion = 0.95; //Un nerf para el lado izquierdo del chasis y que avance en linea recta
 public static final double nerfGiro = 0.65; // Un nerf especifico para que el giro no sea tan rápido
 public static final double modoDos = 0.3; //Un nerf a la velocidad cuando se entra al modo 2 de conducción lenta, 1 es muy rapido y 0 es stop
