@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.hardware.Controles;
 import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj.Timer;
-//import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
 
 
@@ -40,8 +40,8 @@ public class Robot extends TimedRobot {
    SparkDT = new SparkDrive();
    MarcoS = new Marco();
   // BrazoS = new Brazo();
-   //CameraServer.startAutomaticCapture();
-   //CameraServer.startAutomaticCapture(1);
+   CameraServer.startAutomaticCapture();
+   CameraServer.startAutomaticCapture(1);
    gyro.calibrate();
   
 
@@ -78,16 +78,12 @@ public class Robot extends TimedRobot {
     //    \ \_\ \_\ \____/ \ \__\ \____/\ \_\ \_\ \____/\ \_\ \_\ \_\ \____/\ \____/\/\____/
     //     \/_/\/_/\/___/   \/__/\/___/  \/_/\/_/\/___/  \/_/\/_/\/_/\/___/  \/___/  \/___/                                                                                    
    */
-  public void prueba2(){
+  public void prueba(){
     SparkDT.LimpiarEncoder();
     Timer.delay(3);
-    MarcoS.BrazoAutonomo(150, 0.2);
-    Timer.delay(0.3);
-    SparkDT.Mover(0.2, 0.1);
-    Timer.delay(0.3);
-    //arraS.Abrir();
-    Timer.delay(0.3);
-    SparkDT.Mover(1.9, -0.1);
+    SparkDT.Mover(3, 0.1);
+    Timer.delay(1);
+    SparkDT.Girar(90,0.2);
   }
   public void centro (){
     SparkDT.LimpiarEncoder();
@@ -157,10 +153,10 @@ public class Robot extends TimedRobot {
 
 
 
-   // prueba2();
-    MarcoS.BrazoAutonomo(155, 0.4);
-    Timer.delay(1);
-    MarcoS.BrazoAutonomo(155, -0.2); 
+   prueba();
+    //MarcoS.BrazoAutonomo(155, 0.4);
+   // Timer.delay(1);
+   // MarcoS.BrazoAutonomo(155, -0.2); 
 
    //lejos();
    //centro();
@@ -192,7 +188,6 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     //Aqui el codigo donde vamos a poner toda la estructura del robot
-    //GarraS.Cadena();
     GarraS.Intake();
     GarraS.PistonMarco();
     GarraS.Cadena();

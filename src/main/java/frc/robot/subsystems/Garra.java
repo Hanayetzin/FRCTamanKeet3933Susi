@@ -15,7 +15,7 @@ import frc.robot.hardware.Constantes;
 public class Garra {
     DoubleSolenoid SMarco= new DoubleSolenoid(PneumaticsModuleType.CTREPCM, 4, 5);
     public CANSparkMax DriveUp = new CANSparkMax(5, MotorType.kBrushless);// esto no es vdd
-    public CANSparkMax DriveDown = new CANSparkMax(14, MotorType.kBrushless);
+    public CANSparkMax DriveDown = new CANSparkMax(6, MotorType.kBrushless);
 
     RelativeEncoder EncoderUp = DriveUp.getEncoder();
     RelativeEncoder EncoderDown = DriveDown.getEncoder();

@@ -28,7 +28,7 @@ public static final double potenciaCadena = 0.5;
    */
 //MOVIMIETO DEL CHASIS
 public static final double encoderChasisMetros = 0.04517; // Factor de conversion de la posición del encoder a metros, si lo suben el robot se mueve menos en autonomo, si lo bajan se mueve mas
-public static final double encoderChasisGrados = 8.6; // Factor de conversion de la posición del encoder a grados en la funcion giro, si lo suben el robot se mueve menos en autonomo, si lo bajan se mueve mas
+public static final double encoderChasisGrados = 8.4; // Factor de conversion de la posición del encoder a grados en la funcion giro, si lo suben el robot se mueve menos en autonomo, si lo bajan se mueve mas
 public static final double encoderBrazoGrados = 1.5; 
 
 
